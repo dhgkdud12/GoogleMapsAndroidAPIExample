@@ -22,9 +22,11 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.io.IOException;
 import java.util.List;
 
 
@@ -66,7 +68,7 @@ public class MainActivity extends AppCompatActivity
         btnKor2Loc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(editText.getText().toString().length() > 0) {
+                if (editText.getText().toString().length() > 0) {
                     Location location = getLocationFromAddress(getApplicationContext(), editText.getText().toString());
 
                     showCurrentLocation(location);
@@ -81,7 +83,7 @@ public class MainActivity extends AppCompatActivity
         Location resLocation = new Location("");
         try {
             addresses = geocoder.getFromLocationName(address, 5);
-            if((addresses == null) || (addresses.size() == 0)) {
+            if ((addresses == null) || (addresses.size() == 0)) {
                 return null;
             }
             Address addressLoc = addresses.get(0);
@@ -140,7 +142,7 @@ public class MainActivity extends AppCompatActivity
         Location targetLocation = new Location("");
         targetLocation.setLatitude(37.4937);
         targetLocation.setLongitude(127.0643);
-        showMyMarker(targetLocation);
+        //showMyMarker(targetLocation);
     }
 
     //------------------권한 설정 시작------------------------
@@ -188,17 +190,16 @@ public class MainActivity extends AppCompatActivity
     //------------------권한 설정 끝------------------------
 
 
-
-    private void showMyMarker(Location location) {
-        if(myMarker == null) {
-            myMarker = new MarkerOptions();
-            myMarker.position(new LatLng(location.getLatitude(), location.getLongitude()));
-            myMarker.title("◎ 내위치\n");
-            myMarker.snippet("여기가 어디지?");
-            //myMarker.icon(BitmapDescriptorFactory.fromResource(R.drawable.mylocation));
-            mMap.addMarker(myMarker);
-        }
-    }
+//    private void showMyMarker(Location location) {
+//        if (myMarker == null) {
+//            myMarker = new MarkerOptions();
+//            myMarker.position(new LatLng(location.getLatitude(), location.getLongitude()));
+//            myMarker.title("◎ 내위치\n");
+//            myMarker.snippet("여기가 어디지?");
+//            //myMarker.icon(BitmapDescriptorFactory.fromResource(R.drawable.mylocation));
+//            mMap.addMarker(myMarker);
+//        }
+//    }
 
 
     @Override
@@ -206,18 +207,50 @@ public class MainActivity extends AppCompatActivity
 
         mMap = googleMap;
 
-        LatLng SEOUL = new LatLng(37.56, 126.97);
+        LatLng SEOUL = new LatLng(37.56, 126.97); // 마커 추가
 
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(SEOUL);
         markerOptions.title("서울");
-        markerOptions.snippet("한국의 수도");
-        mMap.addMarker(markerOptions);
+        markerOptions.snippet("한국의 수도"); // 마커 옵션 추가
+        mMap.addMarker(markerOptions);       // 마커 등록
 
-        //서울로 이동
+        //서울로 카메라 위치 이동
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(SEOUL, 10));
 
 
+        LatLng location = new LatLng(37.485284, 126.901451); // 마커 추가
+
+        MarkerOptions markerOptions2 = new MarkerOptions();
+        markerOptions2.position(location);
+        markerOptions2.title("구로디지털단지역");
+        markerOptions2.snippet("전철역"); // 마커 옵션 추가
+        mMap.addMarker(markerOptions2);
+
+
+
+        LatLng loc1 = new LatLng(37.501925, 126.917967); // 마커 추가
+
+        MarkerOptions markerOptions3 = new MarkerOptions();
+        markerOptions3.position(loc1);
+        markerOptions3.title("전국천사무료급식소");
+        markerOptions3.snippet("무상 급식소"); // 마커 옵션 추가
+        mMap.addMarker(markerOptions3);
+
+        LatLng loc2 = new LatLng(37.472779, 126.944149); // 마커 추가
+
+        MarkerOptions markerOptions4 = new MarkerOptions();
+        markerOptions4.position(loc2);
+        markerOptions4.title("관악산무료급식소");
+        markerOptions4.snippet("무상 급식소"); // 마커 옵션 추가
+        mMap.addMarker(markerOptions4);
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(loc1, 13));
+
+
+
+
     }
+
 
 }
