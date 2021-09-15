@@ -1,4 +1,4 @@
-package com.sentila.googlemapsandroidapiexample;
+package com.sentila.Mothershand;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -19,21 +19,17 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-import java.io.IOException;
 import java.util.List;
 
-
-public class MainActivity extends AppCompatActivity
+public class GoogleMapActivity extends AppCompatActivity
         implements OnMapReadyCallback {
 
-    private GoogleMap mMap;
+    private com.google.android.gms.maps.GoogleMap mMap;
 
     Button btnLocation, btnKor2Loc;
     EditText editText;
@@ -43,7 +39,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.google_map);
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -203,7 +199,7 @@ public class MainActivity extends AppCompatActivity
 
 
     @Override
-    public void onMapReady(final GoogleMap googleMap) {
+    public void onMapReady(final com.google.android.gms.maps.GoogleMap googleMap) {
 
         mMap = googleMap;
 

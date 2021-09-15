@@ -1,4 +1,4 @@
-package com.sentila.googlemapsandroidapiexample;
+package com.sentila.Mothershand;
 
 import android.content.Context;
 
