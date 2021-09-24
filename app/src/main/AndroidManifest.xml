@@ -26,6 +26,10 @@
         </activity>
         <activity android:name="com.sentila.Mothershand.GoogleMapActivity"></activity>
         <activity android:name="com.sentila.Mothershand.ProviderPageActivity"></activity>
+        <activity android:name="com.sentila.Mothershand.Meal_InfoActivity"></activity>
+        <activity android:name="com.sentila.Mothershand.SupportActivity"></activity>
+        <activity android:name="com.sentila.Mothershand.VolunteerActivity"></activity>
+        <activity android:name="com.sentila.Mothershand.NoticeActivity"></activity>
     </application>
 
 </manifest>

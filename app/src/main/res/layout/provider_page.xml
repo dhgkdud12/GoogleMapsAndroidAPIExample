@@ -94,9 +94,10 @@
                 android:src="@mipmap/ic_launcher">
             </ImageView>
             <Button
+                android:id="@+id/noticeBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="급식정보 등록하기"
+                android:text="공지사항"
                 android:padding="10dp">
             </Button>
         </LinearLayout>
@@ -110,6 +111,7 @@
                 android:src="@mipmap/ic_launcher">
             </ImageView>
             <Button
+                android:id="@+id/supportBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="후원정보 등록하기"
@@ -126,6 +128,7 @@
                 android:src="@mipmap/ic_launcher">
             </ImageView>
             <Button
+                android:id="@+id/volunteerBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="봉사정보 등록하기"
@@ -142,9 +145,10 @@
                 android:src="@mipmap/ic_launcher">
             </ImageView>
             <Button
+                android:id="@+id/mealBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="내가 등록한 급식정보"
+                android:text="급식정보 등록 / 수정"
                 android:padding="10dp">
             </Button>
         </LinearLayout>
