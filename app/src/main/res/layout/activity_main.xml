@@ -14,7 +14,7 @@
             android:id="@+id/userButton"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:background="@drawable/round_button"
+            android:background="@drawable/cancle_round_button"
             android:backgroundTint="#039BE5"
             android:text="사용자"
             android:layout_margin="10dp">
@@ -25,7 +25,7 @@
             android:id="@+id/proButton"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:background="@drawable/round_button"
+            android:background="@drawable/cancle_round_button"
             android:backgroundTint="#7CB342"
             android:text="공급자"
             android:layout_margin="10dp">

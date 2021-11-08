@@ -13,11 +13,19 @@ public class ProviderPageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.provider_page);
 
+        Button editProfileBtn = findViewById(R.id.editProfileBtn);
         Button mealBtn = findViewById(R.id.mealBtn);
         Button supportBtn = findViewById(R.id.supportBtn);
         Button noticeBtn = findViewById(R.id.noticeBtn);
         Button volunteerBtn = findViewById(R.id.volunteerBtn);
 
+        editProfileBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),EditProfileActivity.class);
+                startActivity(intent);
+            }
+        });
 
         mealBtn.setOnClickListener(new View.OnClickListener() {
             @Override

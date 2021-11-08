@@ -71,10 +71,12 @@
         </LinearLayout>
     </LinearLayout>
     <Button
+        android:id="@+id/editProfileBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="프로필 편집"
         android:layout_gravity="right"
+        android:background="@drawable/edit_round_button"
         >
     </Button>
 </LinearLayout>
@@ -98,7 +100,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="공지사항"
-                android:padding="10dp">
+                android:padding="10dp"
+                android:background="@drawable/round_button">
             </Button>
         </LinearLayout>
 
@@ -115,7 +118,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="후원정보 등록하기"
-                android:padding="10dp">
+                android:padding="10dp"
+                android:layout_marginTop="10px"
+                android:background="@drawable/round_button">
             </Button>
         </LinearLayout>
 
@@ -132,7 +137,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="봉사정보 등록하기"
-                android:padding="10dp">
+                android:padding="10dp"
+                android:layout_marginTop="10px"
+                android:background="@drawable/round_button">
             </Button>
         </LinearLayout>
 
@@ -149,7 +156,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="급식정보 등록 / 수정"
-                android:padding="10dp">
+                android:padding="10dp"
+                android:layout_marginTop="10px"
+                android:background="@drawable/round_button">
             </Button>
         </LinearLayout>
     </LinearLayout>

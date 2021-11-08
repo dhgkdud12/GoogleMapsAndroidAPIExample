@@ -3,23 +3,26 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="50px"
-    android:paddingLeft="100px">
+    android:paddingTop="70px"
+    >
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="급식정보"
         android:textSize="100px"
         android:layout_gravity="center"
         android:paddingRight="100px"
+        android:gravity="center"
+        android:background="@color/colorGray"
         />
 
     <LinearLayout
+
+        android:padding="100px"
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="20px"
         android:layout_margin="30px">
 
         <LinearLayout
@@ -37,7 +40,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="장소를 입력하세요."
-                android:textSize="60px"
+                android:textSize="50px"
                 ></EditText>
         </LinearLayout>
 
@@ -45,7 +48,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingBottom="70px">
+            android:paddingBottom="50px">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -56,7 +59,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="일시를 입력하세요."
-                android:textSize="60px"
+                android:textSize="50px"
                 ></EditText>
         </LinearLayout>
 
@@ -76,7 +79,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="수량을 입력하세요."
-                android:textSize="60px"
+                android:textSize="50px"
                 ></EditText>
         </LinearLayout>
 
@@ -96,7 +99,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="메뉴를 입력하세요."
-                android:textSize="60px"
+                android:textSize="50px"
                 ></EditText>
         </LinearLayout>
 
@@ -109,13 +112,18 @@
                 android:id="@+id/cancelBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="취소"></Button>
+                android:text="취소"
+                android:background="@drawable/cancle_round_button"
+                android:textColor="#FFFFFF"></Button>
 
             <Button
+                android:id="@+id/saveBtn"
                 android:layout_marginLeft="400px"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="확인"></Button>
+                android:text="확인"
+                android:background="@drawable/save_round_button"
+                android:textColor="#FFFFFF"></Button>
         </LinearLayout>
 
 

@@ -30,6 +30,7 @@
         <activity android:name="com.sentila.Mothershand.SupportActivity"></activity>
         <activity android:name="com.sentila.Mothershand.VolunteerActivity"></activity>
         <activity android:name="com.sentila.Mothershand.NoticeActivity"></activity>
+        <activity android:name="com.sentila.Mothershand.EditProfileActivity"></activity>
     </application>
 
 </manifest>

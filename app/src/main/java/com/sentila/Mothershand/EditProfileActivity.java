@@ -7,11 +7,11 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class VolunteerActivity extends AppCompatActivity {
+public class EditProfileActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.volunteer_page);
+        setContentView(R.layout.editprofile_page);
 
         Button saveBtn = findViewById(R.id.saveBtn);
         Button cancelBtn = findViewById(R.id.cancelBtn);
@@ -27,9 +27,9 @@ public class VolunteerActivity extends AppCompatActivity {
         cancelBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),ProviderPageActivity.class);
                 onBackPressed();
             }
         });
+
     }
 }

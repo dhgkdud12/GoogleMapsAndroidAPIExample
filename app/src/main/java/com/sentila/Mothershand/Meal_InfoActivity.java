@@ -14,8 +14,16 @@ public class Meal_InfoActivity extends AppCompatActivity {
         setContentView(R.layout.meal_page);
 
         Button cancelBtn = findViewById(R.id.cancelBtn);
+        Button saveBtn = findViewById(R.id.saveBtn);
 
         cancelBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
+        saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),ProviderPageActivity.class);
